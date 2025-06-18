@@ -1,9 +1,13 @@
 /*
 Variavéis
 
-    - let
-    - const
-    - var
+    - let -> pode alterar o valor quando quiser
+    - const -> valor NÃO pode ser declarado NOVAMENTE
+    - var -> DESCONTINUADO / NÃO USAR
 */
 
-let abacate = 31
+let abacate = 40
+
+abacate = 30
+
+console.log(abacate)
