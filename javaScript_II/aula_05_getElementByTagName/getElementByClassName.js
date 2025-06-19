@@ -10,6 +10,6 @@ querySelector -> Trás UM elemtno, o PRIMEIRO que encontrar
 querySelectorAll -> Trás TODOS os elemtnos que ecnontrar
 */
 
-const elements = document.getElementsByName("nome-completo")
+const elements = document.getElementsByTagName("h1")
 
 console.log(elements)
