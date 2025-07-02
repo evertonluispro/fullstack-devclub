@@ -5,7 +5,8 @@
 */
 
 const cart = [10, 244, 99, 2, 20, 33, 250];
-let finalValue = 0;
+let finalValueWithDiscount = 0;
+let finalValue = 0
 
 function calculateDiscount(price, discount = 10) {
   const result = (price * discount) / 100;
@@ -13,10 +14,15 @@ function calculateDiscount(price, discount = 10) {
 }
 
 cart.forEach((value) => {
-  if (value > 30) {
-    value -= calculateDiscount(value);
-  }
   finalValue += value;
 });
 
-console.log(`Valor total do carrinho: R$ ${finalValue.toFixed(2)}`);
+cart.forEach((value) => {
+  if (value > 30) {
+    value -= calculateDiscount(value);
+  }
+  finalValueWithDiscount += value;
+});
+
+console.log(`Valor total do carrinho foi de R$ ${finalValue.toFixed(2)},
+porém você irá pagar R$ ${finalValueWithDiscount.toFixed(2)}, com desconto aplicado.`);
